@@ -1,0 +1,32 @@
+{
+  "ReRoutes": [
+    {
+      "DownstreamPathTemplate": "/api/widget",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 51312
+        }
+      ],
+      "UpstreamPathTemplate": "/api/v1/widget",
+      "UpstreamHttpMethod": [ "Get" ],
+      //"RateLimitOptions": {
+      //  "ClientWhitelist": [],
+      //  "EnableRateLimiting": true,
+      //  "Period": "1s",
+      //  "PeriodTimespan": 1,
+      //  "Limit": 1
+      //},
+
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "TestKey",
+        "AllowedScopes": [ "dataEventRecords" ]
+      }
+      ,
+      "RouteClaimsRequirement": {
+        "role": "dataEventRecords.user"
+      }
+    }
+  ]
+}

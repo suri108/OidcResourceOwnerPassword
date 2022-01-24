@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <AssemblyName>ConsoleResourceOwnerFlowRefreshToken</AssemblyName>
+    <OutputType>Exe</OutputType>
+    <PackageId>ConsoleResourceOwnerFlowRefreshToken</PackageId>
+    <StartupObject>ConsoleResourceOwnerFlowRefreshToken.Program</StartupObject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="IdentityModel" Version="3.9.0" />
+  </ItemGroup>
+
+</Project>
